@@ -27,3 +27,37 @@ C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\ref\Consultar+.dll
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+.pdb
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+.genruntimeconfig.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.csproj.AssemblyReference.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.AssemblyInfoInputs.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.AssemblyInfo.cs
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.csproj.CoreCompileInputs.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\ref\Consultar+.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.pdb
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\appsettings.json
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.exe
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.deps.json
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.runtimeconfig.json
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.runtimeconfig.dev.json
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\ref\Consultar+.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Consultar+.pdb
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\staticwebassets\Consultar+.StaticWebAssets.Manifest.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\staticwebassets\Consultar+.StaticWebAssets.xml
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\scopedcss\bundle\Consultar+.styles.css
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.RazorTargetAssemblyInfo.cache
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.csproj.CopyComplete
+C:\Users\igorm\Documents\FACULDADE\4semestre\Desenvolvimento de Software Visual\1o bimestre\Trabalho\ConsultarMais\obj\Debug\net5.0\Consultar+.genruntimeconfig.cache
