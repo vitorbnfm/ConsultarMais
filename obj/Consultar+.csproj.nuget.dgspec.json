@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj": {}
+    "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj": {
+    "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj",
+        "projectUniqueName": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj",
         "projectName": "Consultar+",
-        "projectPath": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj",
-        "packagesPath": "C:\\Users\\Vitor Bonfim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\obj\\",
+        "projectPath": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj",
+        "packagesPath": "C:\\Users\\igorm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Vitor Bonfim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\igorm\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
