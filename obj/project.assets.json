@@ -730,24 +730,25 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.10",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\igorm\\.nuget\\packages\\": {}
+    "C:\\Users\\Vitor Bonfim\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj",
+      "projectUniqueName": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj",
       "projectName": "Consultar+",
-      "projectPath": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\Consultar+.csproj",
-      "packagesPath": "C:\\Users\\igorm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igorm\\Documents\\FACULDADE\\4semestre\\Desenvolvimento de Software Visual\\1o bimestre\\Trabalho\\ConsultarMais\\obj\\",
+      "projectPath": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\Consultar+.csproj",
+      "packagesPath": "C:\\Users\\Vitor Bonfim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\igorm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Vitor Bonfim\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -771,6 +772,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.10, )"
+          },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[5.0.10, )"
@@ -798,8 +803,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Vitor Bonfim\\Documents\\faculdade\\Consultar+\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -33,6 +33,10 @@
     ".NETCoreApp,Version=v5.0": {
       "Consultar+/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
+=======
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+>>>>>>> 83a3ab6 (Models, Controller, DataContext)
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.10",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",

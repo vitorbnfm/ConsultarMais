@@ -1,7 +1,7 @@
 using System;
 
 
-namespace Consultar+.Models
+namespace Consultar.Models
 {
     public class Medico
     {  
