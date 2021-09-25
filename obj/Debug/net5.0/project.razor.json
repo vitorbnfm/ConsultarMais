@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "Consultar_",
+  "RootNamespace": "Consultar+",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

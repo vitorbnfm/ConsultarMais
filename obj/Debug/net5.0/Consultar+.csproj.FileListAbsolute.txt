@@ -27,3 +27,8 @@ C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\ref\Consultar+.dll
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+.pdb
 C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\obj\Debug\net5.0\Consultar+.genruntimeconfig.cache
+C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Vitor Bonfim\Documents\faculdade\Consultar+\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
