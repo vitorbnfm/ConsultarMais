@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 bin/Debug/net5.0/Consultar+.deps.json
 obj/Consultar+.csproj.nuget.dgspec.json
 obj/project.assets.json
@@ -5,3 +6,7 @@ obj/project.nuget.cache
 obj/Debug/net5.0/Consultar+.csproj.CoreCompileInputs.cache
 obj/Debug/net5.0/Consultar+.csproj.FileListAbsolute.txt
 obj/Debug/net5.0/project.razor.json
+=======
+bin/
+obj/
+>>>>>>> 13adbad (Models)
