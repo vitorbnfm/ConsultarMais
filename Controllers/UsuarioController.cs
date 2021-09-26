@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 
-namespace Consultar_.Controllers
+namespace Consultar.Controllers
 {
     [ApiController]
     [Route("api/usuario")]
