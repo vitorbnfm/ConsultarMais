@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 bin/Debug/net5.0/Consultar+.deps.json
 obj/Consultar+.csproj.nuget.dgspec.json
 obj/project.assets.json
@@ -10,3 +11,7 @@ obj/Debug/net5.0/project.razor.json
 bin/
 obj/
 >>>>>>> 13adbad (Models)
+=======
+bin/
+obj/
+>>>>>>> 42dea86 (gitignore update)
