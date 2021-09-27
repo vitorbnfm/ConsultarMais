@@ -51,7 +51,6 @@ namespace Consultar.Controllers
         [Route("delete/{name}")]
         public IActionResult Delete([FromRoute] string name)
         {
-            //Expressão lambda
             //Buscar um paciente pelo nome
             Paciente paciente = _context.Pacientes.FirstOrDefault
             (
