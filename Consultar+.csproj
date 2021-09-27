@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Consultar_</RootNamespace>
+    
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>

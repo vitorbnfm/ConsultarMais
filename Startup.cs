@@ -2,19 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Consultar.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore;
-using Consultar_.Data;
 
-namespace Consultar_
+
+namespace Consultar
 {
     public class Startup
     {
@@ -29,10 +30,27 @@ namespace Consultar_
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("teste"));
+            //Configurar a política de CORS para receber requisições de qualquer origem
+            services.AddCors(
+                options =>
+                {
+                    options.AddPolicy("CorsPolicy", builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+                }
+            );
+
+            //Configurar todas as injeções de dependência da sua aplicação
+            services.AddDbContext<DataContext>
+            (
+                options => options.UseInMemoryDatabase("database")
+            );
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consultar_", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consultar", Version = "v1" });
             });
         }
 
@@ -43,8 +61,9 @@ namespace Consultar_
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Consultar_ v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Consultar v1"));
             }
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 
