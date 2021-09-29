@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Consultar_.Models;
-using Consultar_.Data;
+using Consultar.Models;
+using Consultar.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 
-namespace Consultar_.Controllers
+namespace Consultar.Controllers
 {
     [ApiController]
     [Route("api/usuario")]
