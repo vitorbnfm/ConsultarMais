@@ -27,7 +27,14 @@ namespace Consultar.Controllers
 
         public IActionResult Create([FromBody] Usuario usuario)
         {
+            var login = _context.Usuarios.FirstOrDefault(
+                u => u.Login == usuario.Login
+            ); // se o usuário não existir, essa variavel será null
 
+            if (login != null)
+            {
+                return BadRequest("O Login digitado já existe.");
+            }
 
             if (usuario.Login.Length < 8 || usuario.Senha.Length < 8)
             {
@@ -103,7 +110,7 @@ namespace Consultar.Controllers
                 u => u.Login == login && u.Senha == senha
             );
 
-            if (usuario == null)
+            if (usuario == null) // se não encontrar um usuário com o login e a senha retorna notfound
             {
                 return NotFound();
             }
