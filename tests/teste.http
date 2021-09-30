@@ -1,0 +1,29 @@
+POST https://localhost:5001/api/usuario/criar
+Content-Type: application/json
+
+{
+    "Nome" : "a",
+    "Login" : "Mucharski32",
+    "Senha" : "igor2303"
+}
+
+###
+
+GET https://localhost:5001/api/usuario/listar
+
+###
+GET https://localhost:5001/api/usuario/getbyid/1
+
+###
+
+POST https://localhost:5001/api/usuario/login
+Content-Type: application/json
+
+{
+    "Login" : "Mucharski",
+    "Senha" : "Mucharski23!"
+}
+
+###
+
+GET https://localhost:5001/api/usuario/login?login=Mucharski2&&senha=igor2303
