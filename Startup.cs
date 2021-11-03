@@ -29,7 +29,6 @@ namespace Consultar
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("teste"));
             //Configurar a política de CORS para receber requisições de qualquer origem
             services.AddCors(
                 options =>
@@ -44,7 +43,7 @@ namespace Consultar
             //Configurar todas as injeções de dependência da sua aplicação
             services.AddDbContext<DataContext>
             (
-                options => options.UseInMemoryDatabase("database")
+                options => options.UseSqlServer(Configuration.GetConnectionString("Azure"))
             );
 
             services.AddControllers();
