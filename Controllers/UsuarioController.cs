@@ -7,6 +7,7 @@ using Consultar.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
+using Consultar.Services;
 
 namespace Consultar.Controllers
 {
@@ -114,6 +115,7 @@ namespace Consultar.Controllers
                 return NotFound(new { message = "Usuário ou senha inválidos" });
             }
 
+            usuario.Token = TokenService.CriarToken(usuario);
             usuario.Senha = "";
             return Ok(usuario);
 
