@@ -42,6 +42,11 @@ namespace Consultar.Controllers
                 return BadRequest("Login e senha devem conter no mínimo 8 caracteres");
             }
 
+            if (usuario.Tipo == null)
+            {
+                usuario.Tipo = "User";
+            }
+
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
             usuario.Senha = "";

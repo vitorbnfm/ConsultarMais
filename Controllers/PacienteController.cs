@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Consultar.Data;
 using Consultar.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -30,6 +31,8 @@ namespace Consultar.Controllers
         //GET: api/paciente/list
         [HttpGet]
         [Route("list")]
+        [Authorize]
+
         public IActionResult List() => Ok(_context.Pacientes.ToList());
 
         //GET: api/paciente/getbyid/1

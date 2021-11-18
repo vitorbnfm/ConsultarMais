@@ -1,10 +1,11 @@
-POST https://localhost:5001/api/usuario/criar
+POST https://localhost:5001/api/usuario/create
 Content-Type: application/json
 
 {
     "Nome" : "a",
-    "Login" : "Jos",
-    "Senha" : "askdjh"
+    "Login" : "1111@gmail.com",
+    "Senha" : "12345678",
+    "Tipo" : "User"
 }
 
 ###
@@ -16,10 +17,15 @@ GET https://localhost:5001/api/usuario/getbyid/1
 
 ###
 
-GET https://localhost:5001/api/usuario/login
+POST https://localhost:5001/api/usuario/login
 Content-Type: application/json
 
 {
-    "Login" : "ioioioio@hotmail.com",
-    "Senha" : "ioioioio2"
+    "Login" : "27071997@gmail.com",
+    "Senha" : "12345678"
 }
+
+###
+
+GET https://localhost:5001/api/consulta/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjExMTFAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2MzcyNjkzNzAsImV4cCI6MTY2ODgwNTM3MCwiaWF0IjoxNjM3MjY5MzcwfQ.BLnOcwdax9Z6dz5SovjWgckwjXLcweGUSDLqcEru80Y
