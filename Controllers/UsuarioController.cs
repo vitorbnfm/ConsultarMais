@@ -23,7 +23,7 @@ namespace Consultar.Controllers
 
         //POST api/usuario/criar
         [HttpPost]
-        [Route("criar")]
+        [Route("create")]
 
         public IActionResult Create([FromBody] Usuario usuario)
         {
@@ -33,25 +33,24 @@ namespace Consultar.Controllers
 
             if (login != null)
             {
-                return BadRequest("O Login digitado já existe.");
+                return BadRequest(new { message = "O Login digitado já existe." });
             }
 
             if (usuario.Login.Length < 8 || usuario.Senha.Length < 8)
             {
                 return BadRequest("Login e senha devem conter no mínimo 8 caracteres");
             }
-            else
-            {
-                _context.Usuarios.Add(usuario);
-                _context.SaveChanges();
-                return Created("", usuario);
-            }
+
+            _context.Usuarios.Add(usuario);
+            _context.SaveChanges();
+            usuario.Senha = "";
+            return Created("", usuario);
 
         }
 
         //GET api/usuario/listar
         [HttpGet]
-        [Route("listar")]
+        [Route("list")]
 
         public IActionResult List() => Ok(_context.Usuarios.ToList());
 
@@ -101,23 +100,23 @@ namespace Consultar.Controllers
         }
 
         //GET: api/usuario/login
-        [HttpGet]
+        [HttpPost]
         [Route("login")]
 
-        public IActionResult Login(string login, string senha)
+        public IActionResult Login([FromBody] Usuario usuario)
         {
-            Usuario usuario = _context.Usuarios.FirstOrDefault(
-                u => u.Login == login && u.Senha == senha
+            usuario = _context.Usuarios.FirstOrDefault(
+                u => u.Login == usuario.Login && u.Senha == usuario.Senha
             );
 
             if (usuario == null) // se não encontrar um usuário com o login e a senha retorna notfound
             {
-                return NotFound();
+                return NotFound(new { message = "Usuário ou senha inválidos" });
             }
-            else
-            {
-                return Ok(usuario);
-            }
+
+            usuario.Senha = "";
+            return Ok(usuario);
+
         }
 
     }

@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
     "Nome" : "a",
-    "Login" : "Mucharski32",
-    "Senha" : "igor2303"
+    "Login" : "Jos",
+    "Senha" : "askdjh"
 }
 
 ###
@@ -16,14 +16,10 @@ GET https://localhost:5001/api/usuario/getbyid/1
 
 ###
 
-POST https://localhost:5001/api/usuario/login
+GET https://localhost:5001/api/usuario/login
 Content-Type: application/json
 
 {
-    "Login" : "Mucharski",
-    "Senha" : "Mucharski23!"
+    "Login" : "ioioioio@hotmail.com",
+    "Senha" : "ioioioio2"
 }
-
-###
-
-GET https://localhost:5001/api/usuario/login?login=Mucharski2&&senha=igor2303
