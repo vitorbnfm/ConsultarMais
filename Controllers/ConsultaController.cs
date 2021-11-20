@@ -34,6 +34,14 @@ namespace Consultar.Controllers
         [Authorize]
         public IActionResult List() => Ok(_context.Consultas.ToList());
 
+        [HttpGet]
+        [Route("listbyuser/{id}")]
+        [Authorize]
+
+        public IActionResult ListarPorUsuario([FromRoute] int id) {
+            return Ok(_context.Consultas.ToList().Where(c => c.UsuarioId == id));
+        }
+
         //GET: api/consulta/getbyid/1
         [HttpGet]
         [Route("getbyid/{id}")]

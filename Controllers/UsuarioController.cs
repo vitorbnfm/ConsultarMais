@@ -105,7 +105,7 @@ namespace Consultar.Controllers
             return Ok(usuario);
         }
 
-        //GET: api/usuario/login
+        //POST: api/usuario/login
         [HttpPost]
         [Route("login")]
 
