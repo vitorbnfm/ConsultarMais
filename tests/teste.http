@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "Nome" : "a",
-    "Login" : "1111@gmail.com",
+    "Login" : "4545@gmail.com",
     "Senha" : "12345678",
     "Tipo" : "User"
 }
@@ -13,7 +13,7 @@ Content-Type: application/json
 GET https://localhost:5001/api/usuario/listar
 
 ###
-GET https://localhost:5001/api/usuario/getbyid/1
+GET https://localhost:5001/api/usuario/getbyid/5
 
 ###
 
@@ -28,4 +28,32 @@ Content-Type: application/json
 ###
 
 GET https://localhost:5001/api/consulta/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjExMTFAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2MzcyNjkzNzAsImV4cCI6MTY2ODgwNTM3MCwiaWF0IjoxNjM3MjY5MzcwfQ.BLnOcwdax9Z6dz5SovjWgckwjXLcweGUSDLqcEru80Y
+
+
+###
+
+GET https://localhost:5001/api/medico/list
+Content-Type: application/json
+
+###
+
+POST https://localhost:5001/api/consulta/create
+Content-Type: application/json
+
+{
+    "DataConsulta" : "2021-05-16T05:50:06",
+    "MedicoId" : 101,
+    "Medico" : {
+        "CRM" : 101,
+        "Nome" : "João",
+        "Especialidade" : "Dermatologista"
+    },
+    "UsuarioId" : "19"
+}
+
+
+###
+
+GET https://localhost:5001/api/consulta/listbyuser/19
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjExMTFAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2MzcyNjkzNzAsImV4cCI6MTY2ODgwNTM3MCwiaWF0IjoxNjM3MjY5MzcwfQ.BLnOcwdax9Z6dz5SovjWgckwjXLcweGUSDLqcEru80Y
