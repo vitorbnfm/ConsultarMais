@@ -1,0 +1,29 @@
+### Cadastrar consulta
+POST https://localhost:5001/api/consulta/create
+Content-Type: application/json
+
+{
+    "DataConsulta" : "28-11-2021",
+    "MedicoId" : 1,
+    "PacienteId" : 1
+}
+
+
+### Listar consultas
+GET https://localhost:5001/api/consulta/list
+
+### Buscar consulta pelo id
+GET https://localhost:5001/api/consulta/getbyid/1
+
+### Alterar consulta
+PUT https://localhost:5001/api/consulta/update
+Content-Type: application/json
+
+{
+    "DataConsulta" : "29/11/2021",
+    "MedicoId" : 1,
+    "PacienteId" : 1
+}
+
+### Deletar consulta
+DELETE https://localhost:5001/api/consulta/delete/

@@ -1,0 +1,29 @@
+### Cadastrar medico
+POST https://localhost:5001/api/medico/create
+Content-Type: application/json
+
+{
+    "CRM" : 55555,
+    "Nome" : "House",
+    "Especialidade" : "infectologia"
+}
+
+
+### Listar medicos
+GET https://localhost:5001/api/medico/list
+
+### Buscar medico pelo id
+GET https://localhost:5001/api/medico/getbyid/1
+
+### Alterar medico
+PUT https://localhost:5001/api/medico/update
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Nome" : "Dr. Gregory House",
+    "Especialidade" : "nefrologia"
+}
+
+### Deletar medico
+DELETE https://localhost:5001/api/medico/delete/Dr. House

@@ -8,7 +8,7 @@ namespace Consultar.Models
         public Consulta() => CriadoEm = DateTime.Now;
 
         public int Id { get; set; }
-        public DateTime DataConsulta { get; set; }
+        public string DataConsulta { get; set; }
         public int MedicoId { get; set; }
         public Medico Medico { get; set; }
         public int PacienteId { get; set; }

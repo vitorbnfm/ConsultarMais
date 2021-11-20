@@ -23,6 +23,10 @@ namespace Consultar.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Consulta consulta)
         {
+            int pacienteId = consulta.PacienteId;
+            consulta.Paciente = _context.Pacientes.Find(pacienteId);
+            int medicoId = consulta.MedicoId;
+            consulta.Medico = _context.Medicos.Find(medicoId);
             _context.Consultas.Add(consulta);
             _context.SaveChanges();
             return Created("", consulta);
@@ -51,7 +55,7 @@ namespace Consultar.Controllers
         //DELETE: api/consulta/delete/
         [HttpDelete]
         [Route("delete/{name}")]
-        public IActionResult Delete([FromRoute] DateTime data)
+        public IActionResult Delete([FromRoute] string data)
         {
             //Buscar consulta pela data
             Consulta consulta = _context.Consultas.FirstOrDefault
