@@ -22,7 +22,7 @@ namespace Consultar.Controllers
             _context = context;
         }
 
-        //POST api/usuario/criar
+        //POST api/usuario/create
         [HttpPost]
         [Route("create")]
 

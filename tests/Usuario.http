@@ -13,7 +13,7 @@ Content-Type: application/json
 GET https://localhost:5001/api/usuario/list
 
 ### Listar usuarios pelo id
-GET https://localhost:5001/api/usuario/getbyid/5
+GET https://localhost:5001/api/usuario/getbyid/2
 
 ###login
 POST https://localhost:5001/api/usuario/login
