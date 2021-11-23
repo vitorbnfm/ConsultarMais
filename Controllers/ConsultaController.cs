@@ -5,7 +5,7 @@ using Consultar.Data;
 using Consultar.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace Consultar.Controllers
 {
@@ -23,6 +23,10 @@ namespace Consultar.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Consulta consulta)
         {
+            int usuarioId = consulta.UsuarioId;
+            consulta.Usuario = _context.Usuarios.Find(usuarioId);
+            int medicoId = consulta.MedicoId;
+            consulta.Medico = _context.Medicos.Find(medicoId);
             _context.Consultas.Add(consulta);
             _context.SaveChanges();
             return Created("", consulta);
@@ -31,8 +35,11 @@ namespace Consultar.Controllers
         //GET: api/consulta/list
         [HttpGet]
         [Route("list")]
-        [Authorize]
-        public IActionResult List() => Ok(_context.Consultas.ToList());
+        public IActionResult List() =>
+            Ok(_context.Consultas
+                .Include(Consulta => Consulta.Usuario)
+                .Include(Consulta => Consulta.Medico)
+                .ToList());
 
         [HttpGet]
         [Route("listbyuser/{id}")]
@@ -59,7 +66,7 @@ namespace Consultar.Controllers
         //DELETE: api/consulta/delete/
         [HttpDelete]
         [Route("delete/{name}")]
-        public IActionResult Delete([FromRoute] DateTime data)
+        public IActionResult Delete([FromRoute] string data)
         {
             //Buscar consulta pela data
             Consulta consulta = _context.Consultas.FirstOrDefault

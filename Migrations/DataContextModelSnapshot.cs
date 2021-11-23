@@ -29,8 +29,8 @@ namespace Consultar.Migrations
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataConsulta")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DataConsulta")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MedicoId")
                         .HasColumnType("int");

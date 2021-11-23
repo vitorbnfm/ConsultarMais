@@ -1,0 +1,26 @@
+### cadastrar usuarios
+POST https://localhost:5001/api/usuario/create
+Content-Type: application/json
+
+{
+    "Nome" : "a",
+    "Login" : "4545@gmail.com",
+    "Senha" : "12345678",
+    "Tipo" : "User"
+}
+
+### Listar usuarios
+GET https://localhost:5001/api/usuario/list
+
+### Listar usuarios pelo id
+GET https://localhost:5001/api/usuario/getbyid/5
+
+###login
+POST https://localhost:5001/api/usuario/login
+Content-Type: application/json
+
+{
+    "Login" : "27071997@gmail.com",
+    "Senha" : "12345678"
+}
+
