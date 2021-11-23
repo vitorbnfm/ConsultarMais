@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Consultar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211120205803_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20211123184202_IniciandoDB")]
+    partial class IniciandoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

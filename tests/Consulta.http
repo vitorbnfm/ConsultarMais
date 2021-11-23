@@ -4,13 +4,14 @@ Content-Type: application/json
 
 {
     "DataConsulta" : "28-11-2021",
-    "MedicoId" : 1,
-    "UsuarioId" : 1
+    "MedicoId" : "1",
+    "UsuarioId" : 2
 }
 
 
 ### Listar consultas
-GET https://localhost:5001/api/consulta/list
+GET https://localhost:5001/api/consulta/listbyuser/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjExMTFAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2Mzc2OTQxODQsImV4cCI6MTY2OTIzMDE4NCwiaWF0IjoxNjM3Njk0MTg0fQ.SfOs474R9y5DvrP6MFcZe1WXvLFgqOLfW5H_QLCn94A
 
 ### Buscar consulta pelo id
 GET https://localhost:5001/api/consulta/getbyid/1

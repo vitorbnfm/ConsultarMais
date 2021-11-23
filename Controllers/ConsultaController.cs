@@ -45,7 +45,13 @@ namespace Consultar.Controllers
         [Route("listbyuser/{id}")]
         [Authorize]
 
-        public IActionResult ListarPorUsuario([FromRoute] int id) {
+        public IActionResult ListarPorUsuario([FromRoute] int id)
+        {
+            var teste = _context.Consultas.ToList().Where(c => c.UsuarioId == id);
+            foreach (var item in teste)
+            {
+                item.Medico = _context.Medicos.Find(item.MedicoId);
+            }
             return Ok(_context.Consultas.ToList().Where(c => c.UsuarioId == id));
         }
 

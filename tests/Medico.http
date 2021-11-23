@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "CRM" : 55555,
     "Nome" : "House",
-    "Especialidade" : "infectologia"
+    "Especialidade" : "Infectologia"
 }
 
 
