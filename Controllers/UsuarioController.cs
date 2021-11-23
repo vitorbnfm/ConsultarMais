@@ -57,7 +57,6 @@ namespace Consultar.Controllers
         //GET api/usuario/listar
         [HttpGet]
         [Route("list")]
-
         public IActionResult List() => Ok(_context.Usuarios.ToList());
 
         [HttpGet]

@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "DataConsulta" : "28-11-2021",
     "MedicoId" : 1,
-    "PacienteId" : 1
+    "UsuarioId" : 1
 }
 
 
@@ -20,10 +20,10 @@ PUT https://localhost:5001/api/consulta/update
 Content-Type: application/json
 
 {
-    "DataConsulta" : "29/11/2021",
+    "DataConsulta" : "29-11-2021",
     "MedicoId" : 1,
-    "PacienteId" : 1
+    "UsuarioId" : 1
 }
 
 ### Deletar consulta
-DELETE https://localhost:5001/api/consulta/delete/
+DELETE https://localhost:5001/api/consulta/delete/28-11-2021

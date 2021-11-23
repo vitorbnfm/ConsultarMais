@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Consultar.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,24 +24,6 @@ namespace Consultar.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Pacientes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Endereco = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Celular = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CriadoEm = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Pacientes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
                 {
@@ -49,7 +31,10 @@ namespace Consultar.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Celular = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Token = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -62,9 +47,9 @@ namespace Consultar.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DataConsulta = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataConsulta = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MedicoId = table.Column<int>(type: "int", nullable: false),
-                    PacienteId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -77,9 +62,9 @@ namespace Consultar.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Consultas_Pacientes_PacienteId",
-                        column: x => x.PacienteId,
-                        principalTable: "Pacientes",
+                        name: "FK_Consultas_Usuarios_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuarios",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -90,9 +75,9 @@ namespace Consultar.Migrations
                 column: "MedicoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Consultas_PacienteId",
+                name: "IX_Consultas_UsuarioId",
                 table: "Consultas",
-                column: "PacienteId");
+                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -101,13 +86,10 @@ namespace Consultar.Migrations
                 name: "Consultas");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
-
-            migrationBuilder.DropTable(
                 name: "Medicos");
 
             migrationBuilder.DropTable(
-                name: "Pacientes");
+                name: "Usuarios");
         }
     }
 }

@@ -5,7 +5,7 @@ using Consultar.Data;
 using Consultar.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace Consultar.Controllers
 {
@@ -23,8 +23,8 @@ namespace Consultar.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Consulta consulta)
         {
-            int pacienteId = consulta.PacienteId;
-            consulta.Paciente = _context.Pacientes.Find(pacienteId);
+            int usuarioId = consulta.UsuarioId;
+            consulta.Usuario = _context.Usuarios.Find(usuarioId);
             int medicoId = consulta.MedicoId;
             consulta.Medico = _context.Medicos.Find(medicoId);
             _context.Consultas.Add(consulta);
@@ -35,8 +35,11 @@ namespace Consultar.Controllers
         //GET: api/consulta/list
         [HttpGet]
         [Route("list")]
-        [Authorize]
-        public IActionResult List() => Ok(_context.Consultas.ToList());
+        public IActionResult List() =>
+            Ok(_context.Consultas
+                .Include(Consulta => Consulta.Usuario)
+                .Include(Consulta => Consulta.Medico)
+                .ToList());
 
         [HttpGet]
         [Route("listbyuser/{id}")]

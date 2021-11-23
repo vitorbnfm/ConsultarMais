@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Consultar.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211118183659_CriadoTipoDeUsuario")]
-    partial class CriadoTipoDeUsuario
+    [Migration("20211120205803_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,20 +31,20 @@ namespace Consultar.Migrations
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataConsulta")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DataConsulta")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MedicoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PacienteId")
+                    b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MedicoId");
 
-                    b.HasIndex("PacienteId");
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Consultas");
                 });
@@ -73,7 +73,7 @@ namespace Consultar.Migrations
                     b.ToTable("Medicos");
                 });
 
-            modelBuilder.Entity("Consultar.Models.Paciente", b =>
+            modelBuilder.Entity("Consultar.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -82,33 +82,6 @@ namespace Consultar.Migrations
 
                     b.Property<string>("Celular")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CriadoEm")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataNascimento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Endereco")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Pacientes");
-                });
-
-            modelBuilder.Entity("Consultar.Models.Usuario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Login")
                         .HasColumnType("nvarchar(max)");
@@ -138,15 +111,15 @@ namespace Consultar.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Consultar.Models.Paciente", "Paciente")
+                    b.HasOne("Consultar.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("PacienteId")
+                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Medico");
 
-                    b.Navigation("Paciente");
+                    b.Navigation("Usuario");
                 });
 #pragma warning restore 612, 618
         }
