@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Consultar.Data;
 using Consultar.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -46,25 +47,6 @@ namespace Consultar.Controllers
             return Ok(medico);
         }
 
-        //DELETE: api/medico/delete/
-        [HttpDelete]
-        [Route("delete/{name}")]
-        public IActionResult Delete([FromRoute] string name)
-        {
-            //Buscar um medico pelo nome
-            Medico medico = _context.Medicos.FirstOrDefault
-            (
-                medico => medico.Nome == name
-            );
-            if (medico == null)
-            {
-                return NotFound();
-            }
-            _context.Medicos.Remove(medico);
-            _context.SaveChanges();
-            return Ok(_context.Medicos.ToList());
-        }
-
         //PUT: api/medico/create
         [HttpPut]
         [Route("update")]
@@ -73,6 +55,23 @@ namespace Consultar.Controllers
             _context.Medicos.Update(medico);
             _context.SaveChanges();
             return Ok(medico);
+        }
+
+        //GET: api/medico/delete
+        [HttpDelete]
+        [Route("delete/{id}")]
+        [Authorize]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            Medico medico = _context.Medicos.FirstOrDefault(c =>
+                c.Id == id
+            );
+            if(medico == null) {
+                return NotFound();
+            }
+            _context.Medicos.Remove(medico);
+            _context.SaveChanges();
+            return Ok(_context.Medicos.ToList());
         }
 
 

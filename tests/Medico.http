@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ### Deletar medico
-DELETE https://localhost:5001/api/medico/delete/House
+DELETE https://localhost:5001/api/medico/delete/1
