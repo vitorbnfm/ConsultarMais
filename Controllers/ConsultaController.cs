@@ -47,10 +47,10 @@ namespace Consultar.Controllers
 
         public IActionResult ListarPorUsuario([FromRoute] int id)
         {
-            var teste = _context.Consultas.ToList().Where(c => c.UsuarioId == id);
-            foreach (var item in teste)
+            var medicos = _context.Consultas.ToList().Where(c => c.UsuarioId == id);
+            foreach (var med in medicos)
             {
-                item.Medico = _context.Medicos.Find(item.MedicoId);
+                med.Medico = _context.Medicos.Find(med.MedicoId);
             }
             return Ok(_context.Consultas.ToList().Where(c => c.UsuarioId == id));
         }
