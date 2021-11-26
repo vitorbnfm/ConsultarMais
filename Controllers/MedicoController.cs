@@ -60,7 +60,7 @@ namespace Consultar.Controllers
         //GET: api/medico/delete
         [HttpDelete]
         [Route("delete/{id}")]
-        [Authorize]
+        [Authorize(Roles = "ADM")]
         public IActionResult Delete([FromRoute] int id)
         {
             Medico medico = _context.Medicos.FirstOrDefault(c =>
