@@ -6,7 +6,6 @@ using Consultar.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace Consultar.Controllers
 {
     [ApiController]
@@ -73,7 +72,5 @@ namespace Consultar.Controllers
             _context.SaveChanges();
             return Ok(_context.Medicos.ToList());
         }
-
-
     }
 }

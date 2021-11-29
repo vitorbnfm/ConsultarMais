@@ -44,7 +44,6 @@ namespace Consultar.Controllers
         [HttpGet]
         [Route("listbyuser/{id}")]
         [Authorize]
-
         public IActionResult ListarPorUsuario([FromRoute] int id)
         {
             var medicos = _context.Consultas.ToList().Where(c => c.UsuarioId == id);
@@ -54,7 +53,6 @@ namespace Consultar.Controllers
             }
             return Ok(_context.Consultas.ToList().Where(c => c.UsuarioId == id));
         }
-
         //GET: api/consulta/getbyid/1
         [HttpGet]
         [Route("getbyid/{id}")]
@@ -97,7 +95,5 @@ namespace Consultar.Controllers
             _context.SaveChanges();
             return Ok(consulta);
         }
-
-
     }
 }
